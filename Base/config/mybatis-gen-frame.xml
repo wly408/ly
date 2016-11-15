@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<properties resource="configuration.properties" />
+	
+<classPathEntry 
+	location="${jdbc.libPath}"/>
+  
+	<context id="commonframe_schema" targetRuntime="MyBatis3">
+		<!--This plugin is only valid for MyBatis3 target runtime -->
+		<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		
+		<commentGenerator>
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		
+	   <jdbcConnection driverClass="${jdbc.driverClassName}"
+		                connectionURL="${jdbc.url}"
+		                userId="${jdbc.username}" password="${jdbc.password}">
+		</jdbcConnection>
+		
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		
+		<javaModelGenerator targetPackage="${mybatis.modelPath}"
+			targetProject="${mybatis.modelSrc}">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!-- 指定目标项目路径targetProject，使用的是文件系统的绝对路径 -->
+		<sqlMapGenerator targetPackage="${mybatis.xmlPath}"
+			targetProject="${mybatis.xmlSrc}">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="${mybatis.mapperPath}" targetProject="${mybatis.mapperSrc}">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		
+		<table tableName="SYS_QUERY" schema="" domainObjectName="sys.SysQuery">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+		<table tableName="SYS_QUERY_JS" schema="" domainObjectName="sys.SysQueryJs">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+		<table tableName="SYS_QUERY_PARAM" schema="" domainObjectName="sys.SysQueryParam">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+		<table tableName="SYS_QUERY_FIELD" schema="" domainObjectName="sys.SysQueryField">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+	<table tableName="SYS_QUERY_FORM_TYPE" schema="" domainObjectName="sys.SysQueryFormType">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+		<table tableName="SYS_QUERY_PARAM_QUERY_TYPE" schema="" domainObjectName="sys.SysQueryParamQueryType">
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+		</table>
+		
+	</context>
+</generatorConfiguration>

@@ -1,0 +1,42 @@
+table.xbox{
+	background:#fff;
+	text-align:left;
+	width:100%;
+	border:1px solid #d5e1e8;
+	margin-bottom:3px;
+	border-collapse:collapse; 
+	border-spacing:0; 
+	padding:2px;
+}
+table.xbox td.label{
+	background:#F3F8FF;
+	height:20px;
+	width:95px;
+	padding:2px 3px;
+	font-size:13px;
+	color:black;
+	padding-left:8px;
+	word-break: keep-all;
+	white-space: nowrap;
+}
+
+
+table.xbox td.content{
+	background:#fff;
+	color:#000;
+	padding:2px 3px;
+	font-size:12px;
+	/*background:#fafafa;*/
+}
+
+table.xbox td{
+	background:#fff;
+	color:#666666;
+	font-size:12px;
+}
+.op{
+overflow: hidden;
+text-align: center;
+padding-top: 5px	
+	
+}
